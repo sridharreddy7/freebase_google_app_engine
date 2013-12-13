@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mycss.css">
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.js"></script>
+
+
+
+<script type="text/javascript">
+$(function() {
+	$("#myinput")
+ .suggest({
+	key: "AIzaSyAiVQhs7P4YxKtY0RVEK0wbB8ViX6hT5Ic",
+   "suggest_new": "Click on me if you don't see anything in the list"
+ })
+
+ .bind("fb-select", function(e, data) {
+   alert(data.name + ", " + data.id + "  stored successfully ");
+   	
+ })
+ .bind("fb-select-new", function(e, val) {
+   alert("Suggest new: " + val);
+ }); 
+});
+
+var image1 = new Image()
+image1.src = "7008.jpg"
+var image2 = new Image()
+image2.src = "9785.jpg"
+var image3 = new Image()
+image3.src = "8801.jpg"
+</script>
+
+
+
+</head>
+
+<body>
+<!--<p>Sridhar's Search<img src="8801.jpg" width="500" height="300" name="slide" /></p>-->
+<p>Sridhar's Search</p>
+<input type= "text" id = "myinput" placeholder="Sridhar's Search" style="width:500px; height:30px" />
+
+
+
+
+</body>
+
+</html>
+
